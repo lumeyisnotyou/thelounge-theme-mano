@@ -1,6 +1,22 @@
 {
   "name": "thelounge-theme-mano",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT"
+  "version": "1.0.3",
+  "main": "package.json",
+  "license": "MIT",
+  "homepage": "https://github.com/lumeyisnotyou/thelounge-theme-mano",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lumeyisnotyou/thelounge-theme-mano.git"
+  },
+  "keywords": [
+    "thelounge-theme",
+    "thelounge"
+  ],
+  "thelounge": {
+    "css": "theme.css",
+    "name": "mano",
+    "type": "theme"
+  }
+    
+  
 }

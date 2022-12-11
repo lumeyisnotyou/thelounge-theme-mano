@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*!
+stole some shit from the solarized repo
+
+/* Samsung Internet and Microsoft Edge (yes, both of them use -webkit- prefix) */
+::-webkit-input-placeholder {
+	color: rgba(131, 148, 150, 0.9);
+}
+
+:root {
+	--body-bg-color: #191c1e;
+	--window-bg-color: #191c1e;
+	--body-color: #fff;
+	--body-color-muted: rgb(187, 187, 187);
+	--link-color: #63d3ff;
+	--unread-marker-color: #63d3ff;
+	--date-marker-color: #63d3ff;
+	--highlight-bg-color: #111d23;
+	--highlight-border-color: #63d3ff;
+	--background-light-color: #111d23;
+	--overlay-bg-color: rgba(0, 0, 0, 0.8);
+}
+
+form.message-search input::placeholder,
+::placeholder {
+	color: rgba(131, 148, 150, 0.9);
+	opacity: 1; /* fix opacity in Firefox */
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	background: hsl(193, 14%, 13%);
+}
+
+::-webkit-scrollbar-thumb:vertical:hover {
+	background: hsl(192, 63%, 14%);
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+	background: hsl(191, 71%, 13%);
+}
+
+html {
+	scrollbar-color: hsl(191, 44%, 12%) hsla(192, 100%, 25%, 10%);
+	scrollbar-width: thin;
+}
+
+.window .logo,
+#loading .logo {
+	display: none;
+}
+
+.window .logo-inverted,
+#loading .logo-inverted {
+	display: inline-block;
+}
+
+#sidebar {
+	color: var(--body-color-muted);
+	background-color: var(--background-light-color);
+}
+
+#sidebar .logo-container {
+	padding-top: 5px;
+}
+
+#sidebar .logo-inverted {
+	height: 35px;
+}
+
+i.hostmask {
+	font-size: 90%;
+	opacity: 0.7;
+}
+
+.irc-monospace,
+pre,
+code,
+kbd {
+	color: #ddd;
+	background-color: #444;
+	border-color: #666;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+#chat .count::before,
+#form #submit,
+#form #upload,
+#chat button.menu,
+#chat button.mentions,
+#chat button.close,
+#chat form.message-search button,
+#viewport .lt,
+#viewport .rt {
+	color: var(--body-color-muted);
+}
+
+#context-menu,
+.textcomplete-menu {
+	border: 0;
+	background-color: #657b83;
+}
+
+.context-menu-item,
+.textcomplete-item {
+	transition: none;
+}
+
+.context-menu-divider {
+	background-color: #aaa;
+}
+
+#loading,
+#chat .userlist,
+.window,
+body {
+	background-color: var(--body-bg-color);
+	color: var(--body-color);
+}
+
+.context-menu-item,
+.textcomplete-item a {
+	color: var(--body-color);
+}
+
+#chat .show-more .btn {
+	background: rgba(88, 110, 117, 0.3);
+	color: var(--body-color);
+	border: 0;
+	text-transform: uppercase;
+	transition: background 0.2s;
+}
+
+#chat .show-more .btn:hover {
+	background: #84ce88;
+}
+
+.btn-reconnect {
+	background: #e74c3c;
+	color: var(--body-color);
+	border: 0;
+	border-radius: 0;
+	margin: 0;
+}
+
+.input,
+form.message-search input {
+	background: var(--background-light-color);
+	color: var(--body-color);
+	border-color: var(--window-heading-color);
+}
+
+#input,
+#form .input,
+#form,
+#chat .userlist .count {
+	background-color: inherit;
+}
+
+.channel-list-item[data-type="lobby"] {
+	color: #3d99db;
+}
+
+.channel-list-item[data-type="lobby"]:hover,
+.channel-list-item[data-type="lobby"].active {
+	color: #93c7eb;
+}
+
+/* Hide close button on channels, it is not used that frequently */
+.channel-list-item[data-type="channel"] .close-tooltip {
+	display: none;
+}
+
+.channel-list-item.active {
+	background-color: var(--body-bg-color);
+}
+
+#footer {
+	height: 43px;
+	line-height: 43px;
+}
+
+.context-menu-item.active,
+.textcomplete-item:hover,
+.textcomplete-menu .active,
+#chat .userlist .user.active,
+#footer {
+	color: var(--body-color);
+	background-color: var(--background-light-color);
+}
+
+#chat .self {
+	/* same as background color, but lighter */
+	background: linear-gradient(to right, hsla(194, 61%, 16%, 1) 5px, #07181d 5px);
+}
+
+#form,
+#viewport .lt::after,
+#chat .header,
+#chat .content,
+#chat .userlist {
+	border-color: var(--background-light-color);
+}
+
+#chat .userlist .search,
+#form .input {
+	border: 0;
+	color: var(--body-color);
+}
+
+#chat.colored-nicks .user.color-1,
+#chat.colored-nicks .user.color-17 {
+	color: #ef4657;
+}
+
+#chat.colored-nicks .user.color-2,
+#chat.colored-nicks .user.color-18 {
+	color: #ff93a4;
+}
+
+#chat.colored-nicks .user.color-3,
+#chat.colored-nicks .user.color-19 {
+	color: #ffb03b;
+}
+
+#chat.colored-nicks .user.color-4,
+#chat.colored-nicks .user.color-20 {
+	color: #cc7d08;
+}
+
+#chat.colored-nicks .user.color-5,
+#chat.colored-nicks .user.color-21 {
+	color: #ffd34e;
+}
+
+#chat.colored-nicks .user.color-6,
+#chat.colored-nicks .user.color-22 {
+	color: #cca01b;
+}
+
+#chat.colored-nicks .user.color-7,
+#chat.colored-nicks .user.color-23 {
+	color: #acf046;
+}
+
+#chat.colored-nicks .user.color-8,
+#chat.colored-nicks .user.color-24 {
+	color: #d5f572;
+}
+
+#chat.colored-nicks .user.color-9,
+#chat.colored-nicks .user.color-25 {
+	color: #499e8d;
+}
+
+#chat.colored-nicks .user.color-10,
+#chat.colored-nicks .user.color-26 {
+	color: #b5ffe1;
+}
+
+#chat.colored-nicks .user.color-11,
+#chat.colored-nicks .user.color-27 {
+	color: #35a7ff;
+}
+
+#chat.colored-nicks .user.color-12,
+#chat.colored-nicks .user.color-28 {
+	color: #91a6ff;
+}
+
+#chat.colored-nicks .user.color-13,
+#chat.colored-nicks .user.color-29 {
+	color: #975af2;
+}
+
+#chat.colored-nicks .user.color-14,
+#chat.colored-nicks .user.color-30 {
+	color: #ff88dc;
+}
+
+#chat.colored-nicks .user.color-15,
+#chat.colored-nicks .user.color-31 {
+	color: #94d5e2;
+}
+
+#chat.colored-nicks .user.color-16,
+#chat.colored-nicks .user.color-32 {
+	color: #396c98;
+}
+
+#chat .msg[data-type="motd"] .text, /* thelounge <= 4.2.0-pre.2 */
+#chat .msg[data-type="monospace_block"] .text,
+#chat .toggle-content {
+	background-color: var(--background-light-color);
+}
+
+#chat .toggle-content,
+#chat .toggle-text .body,
+#chat .toggle-type-error {
+	color: var(--body-color-muted);
+}
+
+#chat .chat-view[data-type="channel"] .msg.highlight .time {
+	color: var(--body-color);
+}
+
+#chat .chat-view[data-type="channel"] .highlight .toggle-content {
+	background-color: var(--body-bg-color);
+}
+
+#chat table.channel-list td {
+	color: #999;
+}
+
+#chat table.channel-list th,
+#chat table.ban-list th,
+#chat table.channel-list td,
+#chat table.ban-list td {
+	border-bottom-color: var(--background-light-color);
+}
+
+/* Increase contrast of some IRC colors */
+.irc-fg2 { color: #007ae6; }
+.irc-fg5 { color: #e969a7; }
+.irc-fg6 { color: #d20ff0; }
+.irc-fg12 { color: #66b2ff; }
+
+@media (max-width: 479px) {
+	#chat .msg[data-type="message"] .from .user::before {
+		content: "<";
+	}
+
+	#chat .msg[data-type="message"] .from .user::after {
+		content: ">";
+	}
+}
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.title,
+h1,
+h2,
+h3,
+.lobby-wrap,
+.input {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+}
+
+.window h1 {
+    font-size: 100px !important;
+}
+
+.channel-list-item {
+    transition: 0.1s;
+}
+
+.name {
+    transition: 0.1s;
+}
+
+.channel-list-item:hover>.name {
+    transform: translateX(5px);
+
+}
+
+textarea#user-specified-css-input {
+    height: 400px;
+}
+
+a {
+    text-decoration: none;
+    width: min-content;
+}
+
+a {
+    box-shadow: inset 0 0 0 0 #63d3ff;
+    color: #63d3ff;
+
+    padding: 0 0.25rem;
+    margin: 0 -0.25rem;
+
+    transition: 0.2s ease-in-out;
+}
+
+a:hover {
+    box-shadow: inset 0 -50px 0 0 #63d3ff;
+    font-size: 15px;
+    color: white !important;
+}
+
+#form,
+.messages .msg,
+.userlist {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.container {
+
+    align-self: start;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    touch-action: pan-y;
+    width: 100%;
+
+}
+#chat .toggle-content {
+	/* i broke something, apparently */
+    align-items: flex-start !important;
+    background: #f6f6f6!important;
+    border-radius: 5px!important;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 20%)!important;
+    display: inline-flex!important;
+    margin: 6px 0 0!important;
+    max-width: 100%!important;
+    overflow: hidden!important;
+    white-space: normal;
+}
